@@ -4,5 +4,5 @@
 
 TEST(PrimeFactorization, Two)
 {
-    ASSERT_EQ(2, PrimeFactorization());
+    ASSERT_EQ(2, PrimeFactorization(2));
 }

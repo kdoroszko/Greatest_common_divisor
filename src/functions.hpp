@@ -1,3 +1,3 @@
 #pragma once
 
-int PrimeFactorization();
+int PrimeFactorization(int naturalNumberForFactorization);
