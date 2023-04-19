@@ -1,11 +1,12 @@
 #include "functions.hpp"
 
-int PrimeFactorization(int naturalNumberForFactorization)
+std::unordered_set<int> PrimeFactorization(int naturalNumberForFactorization)
 {
-    int divisor = 0, firstPrime = 2;
+    int firstPrime = 2;
+    std::unordered_set<int> divisors;
 
     if(naturalNumberForFactorization % firstPrime == 0)
-        divisor = firstPrime;
+        divisors.emplace(firstPrime);
 
-    return divisor;
+    return divisors;
 }

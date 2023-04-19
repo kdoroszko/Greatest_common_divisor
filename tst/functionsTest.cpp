@@ -1,8 +1,11 @@
 #include "gtest/gtest.h"
 
 #include "functions.hpp"
+#include <unordered_set>
 
-TEST(PrimeFactorization, Two)
+TEST(PrimeFactorization, TwoInUnorderedSet)
 {
-    ASSERT_EQ(2, PrimeFactorization(2));
+    std::unordered_set<int> testSet {2};
+
+    ASSERT_EQ(testSet, PrimeFactorization(2));
 }

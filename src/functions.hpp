@@ -1,3 +1,5 @@
 #pragma once
 
-int PrimeFactorization(int naturalNumberForFactorization);
+#include <unordered_set>
+
+std::unordered_set<int> PrimeFactorization(int naturalNumberForFactorization);
