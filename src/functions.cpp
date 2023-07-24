@@ -2,11 +2,17 @@
 
 std::unordered_set<int> PrimeFactorization(int naturalNumberForFactorization)
 {
-    int firstPrime = 2;
+    int prime = 2;
     std::unordered_set<int> divisors;
 
-    if(naturalNumberForFactorization % firstPrime == 0)
-        divisors.emplace(firstPrime);
+    while(naturalNumberForFactorization != 1)
+    {
+        if(naturalNumberForFactorization % prime == 0)
+        {
+            divisors.emplace(prime);
+            naturalNumberForFactorization /= prime;
+        } else prime++;
+    }
 
     return divisors;
 }
