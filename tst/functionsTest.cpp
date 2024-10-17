@@ -3,16 +3,23 @@
 #include "functions.hpp"
 #include <unordered_set>
 
-TEST(PrimeFactorization, TwoInUnorderedSet)
+TEST(PrimeFactorization, OneDivisor)
 {
-    std::unordered_set<int> testSet {2};
+    std::unordered_multiset<int> testSet {2};
 
     ASSERT_EQ(testSet, PrimeFactorization(2));
 }
 
-TEST(PrimeFactorization, SixInUnorderedSet)
+TEST(PrimeFactorization, TwoDivisors)
 {
-    std::unordered_set<int> testSet {2, 3};
+    std::unordered_multiset<int> testSet {2, 3};
 
     ASSERT_EQ(testSet, PrimeFactorization(6));
+}
+
+TEST(PrimeFactorization, RepeatingDivisor)
+{
+    std::unordered_multiset<int> testSet {2, 2, 7};
+
+    ASSERT_EQ(testSet, PrimeFactorization(28));
 }

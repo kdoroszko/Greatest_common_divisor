@@ -2,4 +2,4 @@
 
 #include <unordered_set>
 
-std::unordered_set<int> PrimeFactorization(int naturalNumberForFactorization);
+std::unordered_multiset<int> PrimeFactorization(int naturalNumberForFactorization);

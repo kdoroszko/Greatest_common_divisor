@@ -1,9 +1,9 @@
 #include "functions.hpp"
 
-std::unordered_set<int> PrimeFactorization(int naturalNumberForFactorization)
+std::unordered_multiset<int> PrimeFactorization(int naturalNumberForFactorization)
 {
     int prime = 2;
-    std::unordered_set<int> divisors;
+    std::unordered_multiset<int> divisors;
 
     while(naturalNumberForFactorization != 1)
     {
