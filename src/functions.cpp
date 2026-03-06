@@ -1,5 +1,12 @@
 #include "functions.hpp"
 
+std::unordered_set<int> FindCommonDivisors()
+{
+    std::unordered_set<int> commonDivisors{2};
+
+    return commonDivisors;
+}
+
 std::unordered_multiset<int> PrimeFactorization(int naturalNumberForFactorization)
 {
     int prime = 2;

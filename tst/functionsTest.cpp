@@ -23,3 +23,10 @@ TEST(PrimeFactorization, RepeatingDivisor)
 
     ASSERT_EQ(testSet, PrimeFactorization(28));
 }
+
+TEST(FindCommonDivisors, OneCommonDivisor)
+{
+    std::unordered_set<int> testSet {2};
+
+    ASSERT_EQ(testSet, FindCommonDivisors());
+}
