@@ -26,7 +26,9 @@ TEST(PrimeFactorization, RepeatingDivisor)
 
 TEST(FindCommonDivisors, OneCommonDivisor)
 {
-    std::unordered_set<int> testSet {2};
+    std::unordered_set<int> firstTestGroupOfDivisors {3, 5, 7};
+    std::unordered_set<int> secondTestGroupOfDivisors {2, 7};
+    std::unordered_set<int> commonDivisors {7};
 
-    ASSERT_EQ(testSet, FindCommonDivisors());
+    ASSERT_EQ(commonDivisors, FindCommonDivisors(firstTestGroupOfDivisors, secondTestGroupOfDivisors));
 }

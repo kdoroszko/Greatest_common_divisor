@@ -1,8 +1,12 @@
 #include "functions.hpp"
 
-std::unordered_set<int> FindCommonDivisors()
+std::unordered_set<int> FindCommonDivisors(const std::unordered_set<int>& firstGroupOfDivisors, const std::unordered_set<int>& secondGroupOfDivisors)
 {
-    std::unordered_set<int> commonDivisors{2};
+    std::unordered_set<int> commonDivisors;
+
+    for(const auto &divisor: firstGroupOfDivisors)
+        if(secondGroupOfDivisors.contains(divisor))
+            commonDivisors.emplace(divisor);
 
     return commonDivisors;
 }
