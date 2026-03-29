@@ -26,18 +26,27 @@ TEST(PrimeFactorization, RepeatingDivisor)
 
 TEST(FindCommonDivisors, OneCommonDivisor)
 {
-    std::unordered_set<int> firstTestGroupOfDivisors {3, 5, 7};
-    std::unordered_set<int> secondTestGroupOfDivisors {2, 7};
-    std::unordered_set<int> commonDivisors {7};
+    std::unordered_multiset<int> firstTestGroupOfDivisors {3, 5, 7};
+    std::unordered_multiset<int> secondTestGroupOfDivisors {2, 7};
+    std::unordered_multiset<int> commonDivisors {7};
 
     ASSERT_EQ(commonDivisors, FindCommonDivisors(firstTestGroupOfDivisors, secondTestGroupOfDivisors));
 }
 
 TEST(FindCommonDivisors, TwoCommonDivisors)
 {
-    std::unordered_set<int> firstTestGroupOfDivisors {3, 5, 7};
-    std::unordered_set<int> secondTestGroupOfDivisors {2, 3, 7};
-    std::unordered_set<int> commonDivisors {3, 7};
+    std::unordered_multiset<int> firstTestGroupOfDivisors {3, 5, 7};
+    std::unordered_multiset<int> secondTestGroupOfDivisors {2, 3, 7};
+    std::unordered_multiset<int> commonDivisors {3, 7};
+
+    ASSERT_EQ(commonDivisors, FindCommonDivisors(firstTestGroupOfDivisors, secondTestGroupOfDivisors));
+}
+
+TEST(FindCommonDivisors, RepeatingCommonDivisors)
+{
+    std::unordered_multiset<int> firstTestGroupOfDivisors {3, 3, 5, 7};
+    std::unordered_multiset<int> secondTestGroupOfDivisors {2, 3, 3, 7};
+    std::unordered_multiset<int> commonDivisors {3, 3, 7};
 
     ASSERT_EQ(commonDivisors, FindCommonDivisors(firstTestGroupOfDivisors, secondTestGroupOfDivisors));
 }
