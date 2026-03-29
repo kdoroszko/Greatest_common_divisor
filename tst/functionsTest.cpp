@@ -50,3 +50,12 @@ TEST(FindCommonDivisors, RepeatingCommonDivisors)
 
     ASSERT_EQ(commonDivisors, FindCommonDivisors(firstTestGroupOfDivisors, secondTestGroupOfDivisors));
 }
+
+TEST(FindCommonDivisors, NoCommonDivisors)
+{
+    std::unordered_multiset<int> firstTestGroupOfDivisors {3, 5, 7};
+    std::unordered_multiset<int> secondTestGroupOfDivisors {2, 4, 6};
+    std::unordered_multiset<int> commonDivisors;
+
+    ASSERT_EQ(commonDivisors, FindCommonDivisors(firstTestGroupOfDivisors, secondTestGroupOfDivisors));
+}
