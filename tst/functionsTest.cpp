@@ -32,3 +32,12 @@ TEST(FindCommonDivisors, OneCommonDivisor)
 
     ASSERT_EQ(commonDivisors, FindCommonDivisors(firstTestGroupOfDivisors, secondTestGroupOfDivisors));
 }
+
+TEST(FindCommonDivisors, TwoCommonDivisors)
+{
+    std::unordered_set<int> firstTestGroupOfDivisors {3, 5, 7};
+    std::unordered_set<int> secondTestGroupOfDivisors {2, 3, 7};
+    std::unordered_set<int> commonDivisors {3, 7};
+
+    ASSERT_EQ(commonDivisors, FindCommonDivisors(firstTestGroupOfDivisors, secondTestGroupOfDivisors));
+}
