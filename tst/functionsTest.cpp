@@ -59,3 +59,8 @@ TEST(FindCommonDivisors, NoCommonDivisors)
 
     ASSERT_EQ(commonDivisors, FindCommonDivisors(firstTestGroupOfDivisors, secondTestGroupOfDivisors));
 }
+
+TEST(FindGreatestCommonDivisor, OneCommonDivisor)
+{
+    ASSERT_EQ(3, FindGreatestCommonDivisor());
+}

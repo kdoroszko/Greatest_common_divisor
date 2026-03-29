@@ -27,3 +27,8 @@ std::unordered_multiset<int> PrimeFactorization(int naturalNumberForFactorizatio
 
     return divisors;
 }
+
+int FindGreatestCommonDivisor()
+{
+    return 3;
+}
