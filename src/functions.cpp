@@ -1,12 +1,19 @@
 #include "functions.hpp"
 
-std::unordered_multiset<int> FindCommonDivisors(const std::unordered_multiset<int>& firstGroupOfDivisors, const std::unordered_multiset<int>& secondGroupOfDivisors)
+std::unordered_multiset<int> FindCommonDivisors(std::unordered_multiset<int>& firstGroupOfDivisors, const std::unordered_multiset<int>& secondGroupOfDivisors)
 {
     std::unordered_multiset<int> commonDivisors;
 
-    for(const auto &divisor: firstGroupOfDivisors)
+    std::erase_if(firstGroupOfDivisors, [&](const auto &divisor)
+    {
         if(secondGroupOfDivisors.contains(divisor))
+        {
             commonDivisors.emplace(divisor);
+            return true;
+        }
+
+        return false;
+    });
 
     return commonDivisors;
 }
@@ -33,8 +40,7 @@ int FindGreatestCommonDivisor(const std::unordered_multiset<int>& commonDivisors
     int greatestCommonDivisor = 1;
 
     for(const auto &divisor: commonDivisors)
-        if(divisor > greatestCommonDivisor)
-            greatestCommonDivisor = divisor;
+        greatestCommonDivisor *= divisor;
 
     return greatestCommonDivisor;
 }

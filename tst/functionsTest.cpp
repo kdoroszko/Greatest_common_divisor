@@ -71,12 +71,12 @@ TEST(FindGreatestCommonDivisor, TwoCommonDivisors)
 {
     std::unordered_multiset<int> commonDivisors {3, 7};
 
-    ASSERT_EQ(7, FindGreatestCommonDivisor(commonDivisors));
+    ASSERT_EQ(21, FindGreatestCommonDivisor(commonDivisors));
 }
 
 TEST(FindGreatestCommonDivisor, RepeatingCommonDivisors)
 {
     std::unordered_multiset<int> commonDivisors {3, 3, 7};
 
-    ASSERT_EQ(7, FindGreatestCommonDivisor(commonDivisors));
+    ASSERT_EQ(63, FindGreatestCommonDivisor(commonDivisors));
 }
