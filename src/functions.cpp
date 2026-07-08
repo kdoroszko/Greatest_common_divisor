@@ -1,14 +1,18 @@
 #include "functions.hpp"
 
-std::unordered_multiset<int> FindCommonDivisors(std::unordered_multiset<int>& firstGroupOfDivisors, const std::unordered_multiset<int>& secondGroupOfDivisors)
+std::unordered_multiset<int> FindCommonDivisors(std::unordered_multiset<int>& firstGroupOfDivisors, std::unordered_multiset<int>& secondGroupOfDivisors)
 {
     std::unordered_multiset<int> commonDivisors;
 
     std::erase_if(firstGroupOfDivisors, [&](const auto &divisor)
     {
-        if(secondGroupOfDivisors.contains(divisor))
+        auto iteratorToDivisorInSecondGroup = secondGroupOfDivisors.find(divisor);
+
+        if(iteratorToDivisorInSecondGroup != secondGroupOfDivisors.end())
         {
             commonDivisors.emplace(divisor);
+            secondGroupOfDivisors.erase(iteratorToDivisorInSecondGroup);
+
             return true;
         }
 

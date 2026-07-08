@@ -44,9 +44,9 @@ TEST(FindCommonDivisors, TwoCommonDivisors)
 
 TEST(FindCommonDivisors, RepeatingCommonDivisors)
 {
-    std::unordered_multiset<int> firstTestGroupOfDivisors {3, 3, 5, 7};
-    std::unordered_multiset<int> secondTestGroupOfDivisors {2, 3, 3, 7};
-    std::unordered_multiset<int> commonDivisors {3, 3, 7};
+    std::unordered_multiset<int> firstTestGroupOfDivisors {2, 2, 2, 3, 3};
+    std::unordered_multiset<int> secondTestGroupOfDivisors {2, 2, 2, 2, 2, 3};
+    std::unordered_multiset<int> commonDivisors {2, 2, 2, 3};
 
     ASSERT_EQ(commonDivisors, FindCommonDivisors(firstTestGroupOfDivisors, secondTestGroupOfDivisors));
 }
