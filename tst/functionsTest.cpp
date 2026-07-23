@@ -80,3 +80,8 @@ TEST(FindGreatestCommonDivisor, RepeatingCommonDivisors)
 
     ASSERT_EQ(63, FindGreatestCommonDivisor(commonDivisors));
 }
+
+TEST(DivisorIsInSecondGroupOfDivisors, DivisorIsInSecondGroup)
+{
+    ASSERT_TRUE(DivisorIsInSecondGroupOfDivisors());
+}

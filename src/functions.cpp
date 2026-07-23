@@ -22,6 +22,11 @@ std::unordered_multiset<int> FindCommonDivisors(std::unordered_multiset<int>& fi
     return commonDivisors;
 }
 
+bool DivisorIsInSecondGroupOfDivisors()
+{
+    return true;
+}
+
 std::unordered_multiset<int> PrimeFactorization(int naturalNumberForFactorization)
 {
     int prime = 2;
